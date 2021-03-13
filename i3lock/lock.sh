@@ -23,7 +23,7 @@ i3lock \
 	\
 	--separatorcolor=$BLACK		\
 	--keyhlcolor=$PINK		\
-	--bshlcolor=$PINK		\
+	--bshlcolor=$GREEN		\
 	--verifcolor=$CYAN		\
 	--wrongcolor=$RED	     	\
 	--timecolor=$WHITE		\
@@ -42,6 +42,7 @@ i3lock \
 	--bar-position="1080"	\
 	--bar-direction="1"		\
 	\
+	--blur="5"			\
 	--pass-volume-keys		\
 	-e				\
 	--screen 1            		\
@@ -51,17 +52,22 @@ i3lock \
 	--timestr="%I:%M %p"  		\
 	--datestr="%B %d, %Y" 		\
 	\
-	--veriftext="Verifying"		\
-	--wrongtext="Wrong!"		\
-	--noinputtext="Empty"		\
-	--greetertext="Sup, homeboy?"	\
+	--veriftext="Verifying..."		\
+	--wrongtext="Wrong password!"		\
+	--noinputtext="Empty input..."		\
+	--greetertext="Logged in as: $USER"	\
 	\
 	--timepos="60 : 100"		\
 	--greeterpos="1860 : 60"	\
-	--indpos="960 : 1050"		\
+	--indpos="60 : 100"		\
 	--timesize="70"			\
 	--datesize="20"			\
 	--greetersize="25"		\
+	--verifsize="40"		\
+	--wrongsize="40"		\
 	--time-align="1"		\
 	--date-align="1"		\
+	--wrong-align="1"		\
+	--verif-align="1"		\
 	--greeter-align="2"		\
+\
