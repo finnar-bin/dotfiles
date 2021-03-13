@@ -11,3 +11,4 @@ Linux config files for my personal linux environment
 - rofi
 - dunst
 - bash
+- polybar
