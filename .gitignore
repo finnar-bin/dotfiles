@@ -1,0 +1,15 @@
+BraveSoftware/
+Thunar/
+dconf/
+dunstrc.bak
+gh/
+gtk-2.0/
+gtk-3.0/
+htop/
+mimeapps.list
+neofetch/
+nitrogen/
+pulse/
+user-dirs.dirs
+user-dirs.locale
+xfce4/
