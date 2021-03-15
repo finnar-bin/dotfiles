@@ -16,7 +16,7 @@ set $mod Mod4
 font pango:Ubuntu 10
 
 # Gaps settings
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 0
 # smart_gaps on
 
 gaps inner 4
@@ -224,6 +224,7 @@ set $white "#f8f8f2"
 set $red "#ff5555"
 set $darkgray "#44475a"
 set $navyblue "#6272a4"
+set $transparent "#00000000"
 
 # Window Colors
 #	 		border	bg	text	indicator
