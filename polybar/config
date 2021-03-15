@@ -62,8 +62,8 @@ modules-left = i3
 ;modules-center = mpd
 modules-right =  xbacklight pulseaudio filesystem memory cpu wlan eth battery temperature date powermenu
 
-tray-position = right
-tray-padding = 2
+;tray-position = right
+;tray-padding = 2
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -227,12 +227,12 @@ interval = 3.0
 
 format-connected = <label-connected>
 format-connected-underline = #50fa7b
-label-connected =   %downspeed% 
+label-connected = %{A1:sh $HOME/.config/scripts/wifi.sh:}  %downspeed%%{A} 
 label-connected-foreground = ${colors.foregroung-alt}
 
 format-disconnected = <label-disconnected>
 format-disconnected-underline = #ff5555 
-label-disconnected =  disconnected
+label-disconnected = %{A1:sh $HOME/.config/scripts/wifi.sh:} disconnected%{A}
 label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/eth]
