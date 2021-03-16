@@ -18,9 +18,9 @@ font pango:Ubuntu 10
 # Gaps settings
 for_window [class=".*"] border pixel 0
 # smart_gaps on
-
 gaps inner 4
 gaps outer 1
+gaps top 30
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -38,13 +38,13 @@ font pango:Ubuntu 10
 exec_always --no-startup-id nm-applet
 
 # Nitrogen wallpaper
-exec_always --no-startup-id "nitrogen --restore"
+exec_always --no-startup-id nitrogen --restore
 
 # Picom window compositor
-exec_always "picom -CGb"
+exec_always picom -b
 
 # Dunst notification handler
-exec_always "dunst"
+exec_always dunst
 
 # Launch Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
