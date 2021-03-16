@@ -30,7 +30,7 @@ texts[shutdown]="Shut Down"
 declare -A icons
 icons[lockscreen]=""
 #icons[switchuser]=""
-icons[logout]=""
+icons[logout]=""
 #icons[suspend]=""
 #icons[hibernate]=""
 icons[reboot]=""
@@ -178,7 +178,7 @@ for entry in "${all[@]}"
 do
     confirmationMessages[$entry]=$(write_message "${icons[$entry]}" "Yes, ${texts[$entry]}")
 done
-confirmationMessages[cancel]=$(write_message "${icons[cancel]}" "No, cancel")
+confirmationMessages[cancel]=$(write_message "${icons[cancel]}" "No, Cancel")
 
 if [ $# -gt 0 ]
 then
