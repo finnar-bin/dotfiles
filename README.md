@@ -12,3 +12,17 @@ Linux config files for my personal linux environment
 - dunst
 - bash
 - polybar
+
+## Screenshots
+
+### Desktop
+![desktop](screenshots/desktop.png)
+
+### Rofi
+![rofi](screenshots/rofi.png)
+
+### Open Windows + Wifi menu
+![openwindows](screenshots/windows.png)
+
+### Power menu
+![powermenu](screenshots/powermenu.png)
