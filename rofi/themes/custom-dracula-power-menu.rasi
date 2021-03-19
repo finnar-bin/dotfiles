@@ -6,7 +6,7 @@
 
 * {
     /* Custom colours */
-    dark-grey:             #282a36;
+    dark-grey:             #282a36f2;
     light-grey:            #44475a;
     white:                 #f8f8f2;
     blue-grey:             #6272a4;
@@ -20,7 +20,7 @@
 
     /* Global properties */
     background-color: rgba      (0,0,0, 0%);
-    font: "Ubuntu 14";
+    font: "Ubuntu 24";
 }
 
 #window {
@@ -32,11 +32,10 @@
 }
 
 #mainbox {
-    border:  0;
     padding: 15;
-    background-color: @dark-grey;
-    border-color: @light-grey;
     border-radius:    0px;
+    margin: 35% 25% 0px 25%;
+    height: 300px;
 }
 
 #message {
@@ -52,17 +51,13 @@
 
 #listview {
     fixed-height: 0;
-    border:       0px solid 0px 0px;
-    border-color: @pink;
     spacing:      10px;
     scrollbar:    false;
     padding:      2px 0px 0px;
 }
 
 #element {
-    border: 0;
     padding: 4px;
-
 }
 
 #element.normal.normal {
@@ -140,7 +135,6 @@
     spacing:    10;
     padding:    9px;
     text-color: @white;
-    background-color: @dark-grey;
 }
 
 #inputbar {
