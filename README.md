@@ -26,3 +26,6 @@ Linux config files for my personal linux environment
 
 ### Power menu
 ![powermenu](screenshots/powermenu.png)
+
+### Notes
+- `.bashrc` needs to be symlinked to `~`

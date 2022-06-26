@@ -5,24 +5,30 @@
 # email: narc.ph@gmail.com
 #
 
+PROMPT_COMMAND=__prompt_command
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+### Aliases ###
 alias ls='ls --color=auto'
+alias code='codium'
 
-# get git branch
+### Command prompt setup ###
+
+# Get git branch
 function parse_git_branch() {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-	if [ ! "${BRANCH}" == "" ]
-	then
+
+	if [ ! "${BRANCH}" == "" ]; then
 		STAT=`parse_git_dirty`
-		echo " [${BRANCH}${STAT}]"
+		echo "\[\e[m\]\[\e[1;33m\][${BRANCH}${STAT}]"
 	else
 		echo ""
 	fi
 }
 
-# get current status of git repo
+# Get current status of git repo
 function parse_git_dirty {
 	status=`git status 2>&1 | tee`
 	dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
@@ -32,6 +38,7 @@ function parse_git_dirty {
 	renamed=`echo -n "${status}" 2> /dev/null | grep "renamed:" &> /dev/null; echo "$?"`
 	deleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
 	bits=''
+
 	if [ "${renamed}" == "0" ]; then
 		bits=">${bits}"
 	fi
@@ -57,5 +64,21 @@ function parse_git_dirty {
 	fi
 }
 
+# Get the current working directory
+function get_working_dir {
+	echo "\[\e[1;35m\]\W"
+}
+
+# Sets the command prompt with colors depending on prev command exit status
+function __prompt_command {
+	local EXIT="$?"
+	PS1="`get_working_dir` `parse_git_branch`"
+
+	if [ $EXIT != 0 ]; then
+		PS1+=" \[\e[m\]\[\e[1;31m\]🍺 \[\e[m\]"
+	else
+		PS1+=" \[\e[m\]🍺 "
+	fi
+}
+
 # PS1='[\u@\h \W]\$ '
-PS1="\[\e[1;35m\]\W\[\e[m\]\[\e[1;33m\]\`parse_git_branch\`\[\e[m\] $ "
