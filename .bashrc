@@ -13,6 +13,7 @@ PROMPT_COMMAND=__prompt_command
 ### Aliases ###
 alias ls='ls --color=auto'
 alias code='codium'
+alias edit_config='sudo vim /etc/nixos/configuration.nix'
 
 ### Command prompt setup ###
 
